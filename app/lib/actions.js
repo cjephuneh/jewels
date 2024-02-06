@@ -83,7 +83,6 @@ export const addProduct = async (formData) => {
       primaryemailaddress,
       primarystreet,
       primarycity,
-      primarystate,
       accountnumber,
     });
 
@@ -109,7 +108,6 @@ export const updateProduct = async (formData) => {
       primaryemailaddress,
       primarystreet,
       primarycity,
-      primarystate,
       accountnumber,
     };
 
