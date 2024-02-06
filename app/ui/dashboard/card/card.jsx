@@ -5,7 +5,7 @@ import styles from "./card.module.css";
 const Card = ({ title, number, detail, icon }) => {
   // Determine which icon to display based on the icon prop
   const IconComponent = () => {
-    let iconClass = "icon"; 
+    // let iconClass = "icon"; 
     if (icon === "users") return <MdSupervisedUserCircle size={24} />;
     if (icon === "donations") return <MdAttachMoney size={24} />;
     if (icon === "contacts") return <MdContacts size={24} />;
