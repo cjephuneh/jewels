@@ -18,35 +18,31 @@ const menuItems = [
         {
           title: "Dashboard",
           path: "/dashboard",
-          icon: <MdDashboard />,
+          icon: <MdDashboard className={styles.icon}/>,
         },
         {
           title: "Users",
           path: "/dashboard/users",
-          icon: <MdSupervisedUserCircle />,
+          icon: <MdSupervisedUserCircle className={styles.icon}/>,
         },
         {
           title: "Contituents",
           path: "/dashboard/products",
-          icon: <MdShoppingBag />,
+          icon: <MdShoppingBag className={styles.icon}/>,
         },
         {
           title: "Donations",
           path: "/dashboard/donations",
-          icon: <MdAttachMoney />,
+          icon: <MdAttachMoney className={styles.icon}/>,
         },
       ],
     },
     
     {
-      title: "Support",
+      title: "Account",
       list: [
         
-        {
-          title: "Help",
-          path: "/dashboard/help",
-          icon: <MdHelpCenter />,
-        },
+      
       ],
     },
   ];

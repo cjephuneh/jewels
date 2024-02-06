@@ -30,11 +30,25 @@ const SingleProductPage = async ({ params }) => {
             placeholder={`$${product.donationamount}`}
             className={styles.input}
           />
-          <label>Last Donation Date</label>
+          <label>First Donation</label>
           <input
             type="text"
             name="Last Donation Date"
-            placeholder={product.lastdate}
+            placeholder={`$${product.firstdonation}     ${product.firstdonationdate}`}
+            className={styles.input}
+          />
+          <label>Largest Donation</label>
+          <input
+            type="text"
+            name="Last Donation Date"
+            placeholder={`$${product.largestdonation}     ${product.largestdonationdate}`}
+            className={styles.input}
+          />
+          <label>Last Donation</label>
+          <input
+            type="text"
+            name="Last Donation Date"
+            placeholder={`$${product.latestdonation}     ${product.lastdate}`}
             className={styles.input}
           />
           <label>Account Number</label>

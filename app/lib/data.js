@@ -1,4 +1,4 @@
-import { Product, User, Donation } from "./models";
+import { Product, User, Donation, Latest } from "./models";
 import { connectToDB } from "./utils";
 
 export const fetchUsers = async (q, page) => {
@@ -95,3 +95,4 @@ export const fetchLatest = async (q, page) => {
     throw new Error("Failed to fetch latest!");
   }
 };
+

@@ -5,6 +5,7 @@ import styles from "./card.module.css";
 const Card = ({ title, number, detail, icon }) => {
   // Determine which icon to display based on the icon prop
   const IconComponent = () => {
+    let iconClass = "icon"; 
     if (icon === "users") return <MdSupervisedUserCircle size={24} />;
     if (icon === "donations") return <MdAttachMoney size={24} />;
     if (icon === "contacts") return <MdContacts size={24} />;
@@ -18,7 +19,7 @@ const Card = ({ title, number, detail, icon }) => {
         <span className={styles.title}>{title}</span>
         <span className={styles.number}>{number}</span>
         <span className={styles.detail}>
-          <span className="">{detail.percentage}</span> {detail.text}
+          <span className="detailPercentage">{detail.percentage}</span> {detail.text}
         </span>
       </div>
     </div>

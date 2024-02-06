@@ -81,6 +81,21 @@ const productSchema = new mongoose.Schema(
         type: Number,
         min: 0, 
       },
+      firstdonationdate: {
+        type: String,
+      },
+      largestdonationdate: {
+        type: String,
+      },
+      firstdonation: {
+        type: String,
+      },
+      largestdonation: {
+        type: String,
+      },
+      latestdonation: {
+        type: String,
+      },
     },
   { timestamps: true }
 );

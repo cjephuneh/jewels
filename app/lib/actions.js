@@ -35,6 +35,8 @@ export const addUser = async (formData) => {
 
   revalidatePath("/dashboard/users");
   redirect("/dashboard/users");
+
+  
 };
 
 export const updateUser = async (formData) => {
@@ -153,4 +155,5 @@ export const deleteProduct = async (formData) => {
 
   revalidatePath("/dashboard/products");
 };
+
 

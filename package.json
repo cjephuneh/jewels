@@ -5,11 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
     "@next/eslint-plugin-next": "14.0.1",
+    "aws4": "^1.12.0",
     "bcrypt": "^5.1.1",
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.1",

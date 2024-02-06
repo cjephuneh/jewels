@@ -4,10 +4,10 @@
 
 @layer base {
   :root {
-    --bg: #151c2c;
-    --bgSoft: #182237;
-    --text: white;
-    --textSoft: #b7bac1;
+    --bg: #e8edf1;
+    --bgSoft: #fff;
+    --text: black;
+    --textSoft: #b2bbc9;
   }
 
   *, *::before, *::after {

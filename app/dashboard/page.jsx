@@ -1,10 +1,11 @@
-'use client';
+"use client"
 
-import styles from "../ui/dashboard/dashboard.module.css";
-import Card from "../ui/dashboard/card/card";
-import Transactions from "../ui/dashboard/transactions/transactions";
-import Chart from "../ui/dashboard/chart/chart";
-import Rightbar from "../ui/dashboard/rightbar/rightbar";
+// components/Dashboard.jsx (Adjust the path as necessary)
+import styles from "../ui/dashboard/dashboard.module.css"; // Adjust path as necessary
+import Card from "../ui/dashboard/card/card"; // Adjust path as necessary
+import Transactions from "../ui/dashboard/transactions/transactions"; // Adjust path as necessary
+import Chart from "../ui/dashboard/chart/chart"; // Adjust path as necessary
+import Rightbar from "../ui/dashboard/rightbar/rightbar"; // Adjust path as necessary
 
 const Dashboard = () => {
   return (
@@ -13,7 +14,7 @@ const Dashboard = () => {
         <div className={styles.cards}>
           <Card 
             title="Total Users" 
-            number="5" 
+            number="4" // Use the totalCount prop here
             detail={{ percentage: "4%", text: "than previous week" }}
             icon="users"
           />
@@ -24,7 +25,7 @@ const Dashboard = () => {
             icon="donations"
           />
           <Card 
-            title="Total Contituents" 
+            title="Total Constituents" 
             number="5567" 
             detail={{ percentage: "2%", text: "more than last week" }}
             icon="contacts"
