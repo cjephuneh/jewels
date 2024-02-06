@@ -1,3 +1,4 @@
+require('dotenv').config(); // This line should be at the very top
 const { createServer } = require('http');
 const { parse } = require('url');
 const next = require('next');
