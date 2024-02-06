@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const connection = {};
-const maxRetries = 5; // Set your desired number of retries
+const maxRetries = 5;
+const maxTimeout = 30000; // Set the maximum timeout in milliseconds (e.g., 30 seconds)
 let retries = 0;
 
 export const connectToDB = async () => {
@@ -11,7 +11,7 @@ export const connectToDB = async () => {
     const db = await mongoose.connect("mongodb+srv://erickomee:erickomee254@cluster0.axyzbpk.mongodb.net/dashboard?retryWrites=true&w=majority", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      // Add other MongoDB connection options as needed
+      poolSize: 10, // Adjust the pool size based on your needs
     });
 
     connection.isConnected = db.connections[0].readyState;
@@ -22,10 +22,9 @@ export const connectToDB = async () => {
       const delay = Math.pow(2, retries) * 1000; // Exponential backoff in milliseconds
       console.log(`Retrying connection in ${delay / 1000} seconds (attempt ${retries + 1} of ${maxRetries})...`);
       retries++;
-      setTimeout(connectToDB, delay);
+      setTimeout(connectToDB, Math.min(delay, maxTimeout));
     } else {
       throw new Error("Max retries reached. Unable to establish MongoDB connection.");
     }
   }
 };
-
