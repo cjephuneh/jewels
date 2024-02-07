@@ -8,7 +8,7 @@ export const connectToDB = async () => {
   try {
     if (connection.isConnected) return;
 
-    const db = await mongoose.connect("mongodb+srv://erickomee:erickomee254@cluster0.axyzbpk.mongodb.net/dashboard?retryWrites=true&w=majority", {
+    const db = await mongoose.connect("jjdnfvhjhfv hb hidf ", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       poolSize: 10, // Adjust the pool size based on your needs
